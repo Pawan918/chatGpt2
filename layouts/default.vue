@@ -1,15 +1,13 @@
 <template>
-  <div class="w-full h-screen grid grid-cols-12 grid-rows-12">
-    <Header class="col-span-full row-span-1" />
-    <SideBar
-      class="row-span-11"
-      :class="isNavigationCollapse ? 'col-span-1' : 'col-span-2'"
-    />
-    <div
-      class="row-span-11"
-      :class="isNavigationCollapse ? 'col-span-11' : 'col-span-10'"
-    >
-      <slot />
+  <div class="w-full h-screen flex flex-col relative">
+    <Header class="w-full h-24" />
+    <div class="flex w-full h-[calc(100%-6rem)]">
+      <div class="z-10 h-full absolute md:relative lg:w-52 flex shrink md:shrink-0 bg-black">
+        <SideBar class="h-full" :class="isNavigationCollapse ? 'hidden w-0 md:w-24 md:flex' : 'w-52'" />
+      </div>
+      <div class="w-full h-full">
+        <slot />
+      </div>
     </div>
   </div>
 </template>

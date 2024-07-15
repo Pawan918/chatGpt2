@@ -13,12 +13,15 @@
     "@iconify/json": "^2.2.211",
     "@nuxt/ui": "^2.16.0",
     "@pinia/nuxt": "^0.5.1",
+    "markdown-it": "^14.1.0",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.66"
+    "@iconify-json/mdi": "^1.1.66",
+    "@shikijs/markdown-it": "^1.6.1",
+    "sass": "^1.77.2"
   }
 }

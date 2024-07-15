@@ -5,5 +5,14 @@ export default defineNuxtConfig({
   ui: {
     global: true,
     icons: ['mdi', 'simple-icons']
-  }
+  },
+    runtimeConfig: {
+      public: {
+        apiKey: process.env.API_KEY,
+        baseUrl: process.env.BASE_URL,
+      }
+    },
+    // plugins: [
+    //   '~/plugins/copyPlugin.js'
+    // ],
 });

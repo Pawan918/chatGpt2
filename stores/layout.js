@@ -2,10 +2,12 @@ import { defineStore } from "pinia";
 
 export const useLayoutStore = defineStore("layout", () =>{ 
     const isNavigationCollapse = ref(false);
-    const toggleNavigationCollapse = ()=> {
-        console.log('hello')
+    const chatId = ref(null);
+    const toggleNavigationCollapse = () => {
         isNavigationCollapse.value = !isNavigationCollapse.value;
     };
-
-    return { isNavigationCollapse, toggleNavigationCollapse}
+    const setChatId = (id) => {
+        chatId.value = id;
+    }
+    return { isNavigationCollapse, toggleNavigationCollapse, chatId, setChatId}
 });
